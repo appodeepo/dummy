@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>clock</title>
+  <style type="text/css">
+ 
+  body {
+  background-color: #2e85f7;
+  }
+  .clock {
+  font-size:80px;
+  top:50%;
+  left:50%;
+  padding:0px 5px 0px 5px;
+  border:2px solid black;
+  transform:translateX(-50%) translateY(-50%);
+  color:#fff;
+  position:absolute;
+  }
+  </style>
+     </head>
+
+  <body>
+  <div id="MyClockDisplay" class="clock">
+  </div>
+  <script type="Text/javascript">
+  function showTime(){
+  var date = new Date();
+  var h = date.getHours();//0-23
+  var m = date.getMinutes();//0-59
+  var s = date.getSeconds();//0-59
+  var session = "PM";
+  var time = h + ":" + m + ":" + s + " " + session;
+	document.getElementById("MyClockDisplay").innerText = time;
+	document.getElementById("MyClockDisplay").TextContent = time;
+	setTimeout(showTime,1000);
+	 
+ }
+ showTime();
+  </script>
+  </body>
+  </html>
